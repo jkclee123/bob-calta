@@ -5,25 +5,18 @@ import './LanguageSelector.css';
 const LanguageSelector = () => {
   const { language, changeLanguage } = useLanguage();
 
-  const languages = [
-    { code: 'zh', name: '中文'},
-    { code: 'en', name: 'English'}
-  ];
+  const toggleLanguage = () => {
+    changeLanguage(language === 'en' ? 'zh' : 'en');
+  };
 
   return (
-    <div className="language-selector">
-      <select
-        value={language}
-        onChange={(e) => changeLanguage(e.target.value)}
-        className="language-select"
-      >
-        {languages.map((lang) => (
-          <option key={lang.code} value={lang.code}>
-            {lang.flag} {lang.name}
-          </option>
-        ))}
-      </select>
-    </div>
+    <button
+      onClick={toggleLanguage}
+      className="language-toggle"
+      aria-label={`Switch to ${language === 'en' ? 'Chinese' : 'English'}`}
+    >
+      {language === 'en' ? 'En' : '中'}
+    </button>
   );
 };
 
