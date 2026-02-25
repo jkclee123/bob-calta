@@ -39,9 +39,11 @@
 }
 
 .logo h1 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 24px;
   font-weight: 800;
   margin: 0;
+  margin-left: 0.5rem;
 }
 
 .nav {

@@ -1,0 +1,32 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="512"
+  height="512"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- Calculator body outline -->
+  <rect width="16" height="20" x="4" y="2" rx="2" stroke="#f4a02a" />
+  
+  <!-- Display screen line -->
+  <line x1="8" x2="16" y1="6" y2="6" stroke="#f4a02a" />
+  
+  <!-- Equals button (right side) -->
+  <line x1="16" x2="16" y1="14" y2="18" stroke="#f4a02a" />
+  
+  <!-- Number pad buttons - Row 1 -->
+  <path d="M16 10h.01" stroke="#f4a02a" />
+  <path d="M12 10h.01" stroke="#f4a02a" />
+  <path d="M8 10h.01" stroke="#f4a02a" />
+  
+  <!-- Number pad buttons - Row 2 -->
+  <path d="M12 14h.01" stroke="#f4a02a" />
+  <path d="M8 14h.01" stroke="#f4a02a" />
+  
+  <!-- Number pad buttons - Row 3 -->
+  <path d="M12 18h.01" stroke="#f4a02a" />
+  <path d="M8 18h.01" stroke="#f4a02a" />
+</svg>
