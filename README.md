@@ -1,4 +1,4 @@
-<img src="public/logo.svg" alt="Logo" width="40" style="vertical-align: middle; margin-right: 10px;"># Bob's Calta
+# <img src="public/logo.svg" width="36" align="center"> Bob's Calta
 
 A React web application showcasing a collection of calculator programs for the **Casio fx-50FH II**. This interactive documentation provides detailed program code, usage instructions, and mathematical analysis for various recreational programs.
 
