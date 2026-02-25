@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const useDocumentTitle = (titleKey, baseTitleTranslations = null) => {
   const { t } = useLanguage();
+  const location = useLocation();
 
   useEffect(() => {
     let title;
@@ -20,5 +22,5 @@ export const useDocumentTitle = (titleKey, baseTitleTranslations = null) => {
     }
 
     document.title = title;
-  }, [titleKey, baseTitleTranslations, t]);
+  }, [titleKey, baseTitleTranslations, t, location.pathname]);
 }; 

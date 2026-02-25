@@ -3,11 +3,11 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "bob-calta-prog",
+      "name": "bob-calta",
       "dependencies": {
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
-        "react-router-dom": "^7.13.0",
+        "react-router-dom": "^7.13.1",
       },
       "devDependencies": {
         "@vitejs/plugin-react": "^4.7.0",
