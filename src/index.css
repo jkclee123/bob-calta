@@ -22,6 +22,7 @@
   
   /* Accent Colors */
   --color-accent: hsl(35, 90%, 56%);
+  --color-accent-alpha: hsl(35, 90%, 56%, 0.1);
   --color-error: hsl(2, 90%, 56%);
 }
 

@@ -63,8 +63,8 @@
 }
 
 .nav-link.active {
-  color: var(--color-accent);
-  background-color: var(--bg-quaternary);
+  color: white;
+  background-color: var(--color-accent-alpha);
 }
 
 .header-right {

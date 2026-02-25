@@ -51,7 +51,7 @@
   color: var(--text-primary);
   margin-bottom: 24px;
   padding-bottom: 12px;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 0.5px solid white;
 }
 
 .symbols-grid {
@@ -65,7 +65,7 @@
   border: 1px solid var(--border-primary);
   border-radius: 8px;
   padding: 16px;
-  background: var(--bg-quaternary);
+  background: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -83,11 +83,11 @@
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: var(--bg-quinary);
+  background-color: var(--bg-tertiary);
   color: var(--text-primary);
   padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid var(--border-primary);
+  /* border: 1px solid var(--border-primary); */
 }
 
 /* Math symbol replacements for Android compatibility */
@@ -132,7 +132,7 @@
 }
 
 .typing-instruction {
-  background-color: var(--bg-quinary);
+  background-color: var(--bg-tertiary);
   padding: 6px 8px;
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
@@ -198,7 +198,7 @@
 
   .symbol-display {
     font-size: 1.3rem;
-    padding: 6px 8px;
+    padding: 4px 10px;
   }
 
   .symbol-header {

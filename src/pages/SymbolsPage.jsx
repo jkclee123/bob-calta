@@ -16,7 +16,7 @@ const SymbolsPage = () => {
 
   const filterSymbols = () => {
     let filteredSymbols = [];
-    
+
     Object.entries(categories).forEach(([categoryKey, category]) => {
       if (selectedCategory === 'all' || selectedCategory === categoryKey) {
         filteredSymbols.push({
@@ -26,7 +26,7 @@ const SymbolsPage = () => {
         });
       }
     });
-    
+
     return filteredSymbols;
   };
 
@@ -62,10 +62,10 @@ const SymbolsPage = () => {
                   {categoryData.symbols.map((symbol, index) => (
                     <div key={index} className="symbol-card">
                       <div className="symbol-header">
-                        <span 
+                        <span
                           className="symbol-display"
-                          dangerouslySetInnerHTML={{ 
-                            __html: formatCodeForDisplay(symbol.symbol) 
+                          dangerouslySetInnerHTML={{
+                            __html: formatCodeForDisplay(symbol.symbol)
                           }}
                         />
                       </div>
@@ -74,11 +74,11 @@ const SymbolsPage = () => {
                           {t(symbol.description)}
                         </p>
                         <div className="symbol-typing">
-                          <strong>{t({ en: 'How to input:', zh: '輸入說明:' })}</strong>
-                          <code 
+                          {/* <strong>{t({ en: 'How to input:', zh: '輸入說明:' })}</strong> */}
+                          <code
                             className="typing-instruction"
-                            dangerouslySetInnerHTML={{ 
-                              __html: formatCodeForDisplay(t(symbol.howToType)) 
+                            dangerouslySetInnerHTML={{
+                              __html: formatCodeForDisplay(t(symbol.howToType))
                             }}
                           />
                         </div>
