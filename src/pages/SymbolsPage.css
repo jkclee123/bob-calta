@@ -1,6 +1,7 @@
 .symbols-page {
   min-height: calc(100vh - 70px);
   padding: 40px 0;
+  animation: fadeInUp 0.5s ease-out;
 }
 
 /* Controls */

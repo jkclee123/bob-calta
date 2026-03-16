@@ -1,6 +1,7 @@
 .program-page {
   min-height: calc(100vh - 70px);
   padding: 40px 0;
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .error-message {
@@ -602,7 +603,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.5s ease-out;
   overflow: hidden; /* Prevent background scrolling when modal is open */
 }
 
@@ -614,7 +615,7 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: var(--shadow);
-  animation: zoomIn 0.3s ease-out;
+  animation: zoomIn 0.5s ease-out;
 }
 
 .image-modal-close {

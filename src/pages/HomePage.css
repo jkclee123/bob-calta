@@ -1,5 +1,6 @@
 .home-page {
   min-height: calc(100vh - 70px);
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .banner-section {
