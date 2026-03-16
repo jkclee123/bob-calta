@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useDocumentTitle } from '../utils/useDocumentTitle';
@@ -6,9 +7,30 @@ import './HomePage.css';
 
 const HomePage = () => {
   const { t } = useLanguage();
-  
+  const gridRef = useRef(null);
+
   // Set document title for homepage
   useDocumentTitle("Bob's Calta");
+
+  useEffect(() => {
+    const cards = gridRef.current?.querySelectorAll('.program-card-link');
+    if (!cards) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="home-page">
@@ -25,7 +47,7 @@ const HomePage = () => {
       {/* Programs Grid */}
       <section className="programs-section">
         <div className="container">
-          <div className="programs-grid">
+          <div className="programs-grid" ref={gridRef}>
             {Object.values(programsData).map((program, index) => (
               <Link
                 key={program.id}

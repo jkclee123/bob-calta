@@ -84,6 +84,14 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.program-card-link.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive Design */
