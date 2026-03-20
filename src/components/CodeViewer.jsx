@@ -22,17 +22,17 @@ const CodeViewer = ({ program }) => {
           {linesWithCumulative.map((line, index) => (
             <div key={line.line} className={'code-line-card'}>
               <div className="line-content">
-                {line.comment && (
-                  <div className="line-comment">
-                    <span className="comment-text">{t(line.comment)}</span>
-                  </div>
-                )}
                 <div className="line-code-content">
                   <code
                     className="code-text"
                     dangerouslySetInnerHTML={{ __html: formatCodeForDisplay(line.code) }}
                   />
                 </div>
+                {line.comment && (
+                  <div className="line-comment">
+                    <span className="comment-text">{t(line.comment)}</span>
+                  </div>
+                )}
               </div>
               <div className="line-stats">
                 <div className="line-bytes">
