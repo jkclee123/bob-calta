@@ -4,7 +4,7 @@
   border-radius: 6px;
   background-color: transparent;
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   outline: none;
@@ -21,13 +21,13 @@
 @media (max-width: 768px) {
   .language-toggle {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .language-toggle {
     padding: 6px 8px;
-    font-size: 11px;
+    font-size: 13px;
   }
 }
