@@ -2,7 +2,7 @@
   "id": "pokemon_casio",
   "name": {
     "en": "Pokemon Casio",
-    "zh": "寵物小精靈模擬器"
+    "zh": "寵物小精靈對戰模擬器"
   },
   "description": {
     "en": "A Pokémon battle assistant program for calculating damage, rolling move accuracy, and tracking HP. Supports stat level modifiers, critical hits, multi-hit moves, and status condition probability.",
