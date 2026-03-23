@@ -161,7 +161,7 @@
         "Calculate damage: input 100 to M (or press EXE to use default)",
         "Track HP directly: input 99 to M",
         "Re-roll K hits with previous damage values: input -K to M",
-        "Critical hit rates by level: 0 = 1/24, 1 = 1/8, 2 = 1/2, 3 = always",
+        "Critical hit rates by level: 0 = 1/24, 1 = 1/8, 2 = 1/2, 3 = always, negative = never",
         "Damage modifiers: input each multiplier one at a time, input 1 to finish",
         "After damage calculation, program flows to HP tracking automatically"
       ],
@@ -172,7 +172,7 @@
         "計算傷害：M 輸入 100（或直接按 EXE 使用預設值）",
         "直接追蹤生命值：M 輸入 99",
         "以上次傷害值重新擲K次攻擊：M 輸入 -K",
-        "會心一擊等級機率：0 = 1/24、1 = 1/8、2 = 1/2、3 = 必定",
+        "會心一擊等級機率：0 = 1/24、1 = 1/8、2 = 1/2、3 = 必定、負數 = 不會",
         "傷害修正值：逐一輸入各修正倍率，輸入 1 結束",
         "傷害計算結束後，程式會自動進入生命值追蹤"
       ]
@@ -305,8 +305,8 @@
             "zh": "程式顯示：120（剩餘生命值）"
           },
           {
-            "en": "Program displays: 70.59 (HP percentage)",
-            "zh": "程式顯示：70.59（生命值百分比）"
+            "en": "Program displays: 71 (HP percentage)",
+            "zh": "程式顯示：71（生命值百分比）"
           }
         ]
       },
