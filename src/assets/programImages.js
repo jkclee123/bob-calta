@@ -13,6 +13,8 @@ import timerWebp from './images/programs/timer.webp';
 import timerPng from './images/programs/timer.png';
 import trigonometryWebp from './images/programs/trigonometry.webp';
 import trigonometryPng from './images/programs/trigonometry.png';
+import pokemonCasioWebp from './images/programs/pokemon_casio.webp';
+import pokemonCasioPng from './images/programs/pokemon_casio.png';
 
 export const programImages = {
   avalon: { webp: avalonWebp, png: avalonPng },
@@ -23,4 +25,5 @@ export const programImages = {
   timer_stopwatch: { webp: timerWebp, png: timerPng },
   timer_with_counter: { webp: timerWebp, png: timerPng },
   trigonometry: { webp: trigonometryWebp, png: trigonometryPng },
+  pokemon_casio: { webp: pokemonCasioWebp, png: pokemonCasioPng },
 };

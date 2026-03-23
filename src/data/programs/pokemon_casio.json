@@ -1,0 +1,122 @@
+{
+  "id": "pokemon_casio",
+  "name": {
+    "en": "Pokemon Casio",
+    "zh": "寵物小精靈Casio"
+  },
+  "description": {
+    "en": "",
+    "zh": ""
+  },
+  "image": "/images/programs/pokemon_casio.png",
+  "mode": "REG Lin",
+  "code": [
+    {
+      "code": "Lbl 0:Norm 2:100→M:?→M:Fix 0:M=13⇒Goto 1:M=100⇒Goto 5:M<0⇒Goto 8:M=99⇒Goto 9:",
+      "bytes": 51,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "M<1⇒100M→M:If M>100Ran#:Then Yeαh◢Else FuCkeD◢IfEnd:Goto 0:",
+      "bytes": 38,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "Lbl 1:1→A:?→A:3→B:?→B:(B-A+1)Ran#+A-.5:Ans◢Goto 0:",
+      "bytes": 38,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "Lbl 5:0,0;0DT:n→Y:?→Y:maxX→A:maxY→D:ClrStat:0,0;YDT:",
+      "bytes": 35,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "?→A:A,0;0DT:0→B:?→B:A(2+B(B>0→M:Rnd(M÷(2-B(B<0))-.5→X:Rnd(.5M-.5→C:",
+      "bytes": 60,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "?→D:0,D;0DT:0→B:?→B:.44Y→Y:D÷(2-B(B<0→M:",
+      "bytes": 39,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "X÷Rnd(M(2+B(B>0))-.5:Rnd(YAns+1.5→A:C÷Rnd(2M-.5:Rnd(YAns+1.5:Rnd(1.5Ans-.5→B:",
+      "bytes": 56,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "0→C:?→C:7C²÷48-16⁻¹C+24⁻¹-(C<0→Y:",
+      "bytes": 31,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "0→D:Lbl 6:Norm 2:D→X:?→X:Fix 0:X=1⇒Goto 7:X=D⇒Goto 6:Rnd(XA-.5→A:Rnd(XB-.5→B:Fix 1:.01D+10Rnd(X→D:Goto 6:",
+      "bytes": 71,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "Lbl 7:1→M:?→M:Lbl 8:M<0⇒-M→M:0→D:",
+      "bytes": 27,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "For M→M To 1 Step -1:A→X:If Y>Ran#:Then B→X:Cret◢IfEnd:D-Rnd(X(.15Ran#+.85)-.5→D:Next:",
+      "bytes": 52,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "code": "Lbl 9:?→D:159→C:?→C:159→M:?→M:2(D<0)-1:C+Rnd(D+.5Ans→C:C<0⇒0→C:C>M⇒M→C:C◢100C÷M",
+      "bytes": 71,
+      "comment": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "guide": {
+    "parameters": {
+      "en": [],
+      "zh": []
+    },
+    "instructions": {
+      "en": [],
+      "zh": []
+    },
+    "examples": []
+  }
+}

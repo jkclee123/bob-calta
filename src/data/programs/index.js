@@ -7,6 +7,7 @@ import timerWithCounter from './timer_with_counter.json';
 import pokerDealer from './poker_dealer.json';
 import avalon from './avalon.json';
 import trigonometry from './trigonometry.json';
+import pokemonCasio from './pokemon_casio.json';
 
 // Import program images
 import { programImages } from '../../assets/programImages';
@@ -35,6 +36,7 @@ const programs = {
   dice_roll: diceRoll,
   mastermind: mastermind,
   poker_dealer: pokerDealer,
+  pokemon_casio: pokemonCasio,
   timer_stopwatch: timerStopwatch,
   timer_with_counter: timerWithCounter,
   trigonometry: trigonometry,
