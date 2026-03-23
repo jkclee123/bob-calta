@@ -16,7 +16,7 @@
       "code": "Lbl 0:Norm 2:60→M:?→M:",
       "bytes": 15,
       "comment": {
-        "en": "Function Selection Menu",
+        "en": "Function Select Menu",
         "zh": "功能選單"
       }
     },
@@ -136,7 +136,7 @@
   "guide": {
     "parameters": {
       "en": [
-        "Function Selection Menu:",
+        "Function Select Menu:",
         "- M: Function select variable",
         "Character Drawing:",
         "- A: Number of players",
@@ -166,7 +166,7 @@
         "Draw character cards: input 0 to M"
       ],
       "zh": [
-        "隨機選出K個玩家領袖：M 輸入 -K",
+        "從K個玩家中隨機選出領袖：M 輸入 -K",
         "計時K秒：M 輸入 K",
         "出K張任務牌：M 輸入 K（K小於或等於5）",
         "抽角色牌：M 輸入 0"

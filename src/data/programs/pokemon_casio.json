@@ -2,11 +2,11 @@
   "id": "pokemon_casio",
   "name": {
     "en": "Pokemon Casio",
-    "zh": "寵物小精靈Casio"
+    "zh": "寵物小精靈模擬器"
   },
   "description": {
-    "en": "",
-    "zh": ""
+    "en": "A Pokémon battle assistant program for calculating damage, rolling move accuracy, and tracking HP. Supports stat level modifiers, critical hits, multi-hit moves, and status condition probability.",
+    "zh": "寵物小精靈對戰輔助程式，計算傷害、判定招式命中率和追蹤生命值。支援能力等級修正、會心一擊、多段攻擊和狀態異常機率。"
   },
   "image": "/images/programs/pokemon_casio.png",
   "mode": "REG Lin",
@@ -15,96 +15,96 @@
       "code": "Lbl 0:Norm 2:100→M:?→M:Fix 0:M=13⇒Goto 1:M=100⇒Goto 5:M<0⇒Goto 8:M=99⇒Goto 9:",
       "bytes": 51,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Function Select Menu",
+        "zh": "功能選單"
       }
     },
     {
       "code": "M<1⇒100M→M:If M>100Ran#:Then Yeαh◢Else FuCkeD◢IfEnd:Goto 0:",
       "bytes": 38,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Roll for move accuracy or status condition probability",
+        "zh": "判定招式命中率或狀態異常機率"
       }
     },
     {
       "code": "Lbl 1:1→A:?→A:3→B:?→B:(B-A+1)Ran#+A-.5:Ans◢Goto 0:",
       "bytes": 38,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Roll a number between 2 numbers (e.g. roll for number of turns to sleep)",
+        "zh": "在兩個數字之間隨機選取（例如：決定睡眠回合數）"
       }
     },
     {
       "code": "Lbl 5:0,0;0DT:n→Y:?→Y:maxX→A:maxY→D:ClrStat:0,0;YDT:",
       "bytes": 35,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input move's power",
+        "zh": "輸入招式威力"
       }
     },
     {
       "code": "?→A:A,0;0DT:0→B:?→B:A(2+B(B>0→M:Rnd(M÷(2-B(B<0))-.5→X:Rnd(.5M-.5→C:",
       "bytes": 60,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input attacking pokemon attack stats and attack level",
+        "zh": "輸入攻擊方攻擊力和攻擊等級"
       }
     },
     {
       "code": "?→D:0,D;0DT:0→B:?→B:.44Y→Y:D÷(2-B(B<0→M:",
       "bytes": 39,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input defending pokemon defence stats and defence level",
+        "zh": "輸入防守方防禦力和防禦等級"
       }
     },
     {
       "code": "X÷Rnd(M(2+B(B>0))-.5:Rnd(YAns+1.5→A:C÷Rnd(2M-.5:Rnd(YAns+1.5:Rnd(1.5Ans-.5→B:",
       "bytes": 56,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Calculate A/D ratio for normal and critical hit",
+        "zh": "計算普通攻擊和會心一擊嘅攻防比"
       }
     },
     {
       "code": "0→C:?→C:7C²÷48-16⁻¹C+24⁻¹-(C<0→Y:",
       "bytes": 31,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input critical hit level",
+        "zh": "輸入會心一擊等級"
       }
     },
     {
       "code": "0→D:Lbl 6:Norm 2:D→X:?→X:Fix 0:X=1⇒Goto 7:X=D⇒Goto 6:Rnd(XA-.5→A:Rnd(XB-.5→B:Fix 1:.01D+10Rnd(X→D:Goto 6:",
       "bytes": 71,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input damage modifier one by one",
+        "zh": "逐一輸入傷害修正值"
       }
     },
     {
       "code": "Lbl 7:1→M:?→M:Lbl 8:M<0⇒-M→M:0→D:",
       "bytes": 27,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input number of hits",
+        "zh": "輸入攻擊次數"
       }
     },
     {
       "code": "For M→M To 1 Step -1:A→X:If Y>Ran#:Then B→X:Cret◢IfEnd:D-Rnd(X(.15Ran#+.85)-.5→D:Next:",
       "bytes": 52,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Calculate each hit damage",
+        "zh": "計算每次攻擊傷害"
       }
     },
     {
       "code": "Lbl 9:?→D:159→C:?→C:159→M:?→M:2(D<0)-1:C+Rnd(D+.5Ans→C:C<0⇒0→C:C>M⇒M→C:C◢100C÷M",
       "bytes": 71,
       "comment": {
-        "en": "",
-        "zh": ""
+        "en": "Input damage dealt, current health and max health",
+        "zh": "輸入傷害、當前生命值和最大生命值"
       }
     }
   ],
