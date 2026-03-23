@@ -110,13 +110,234 @@
   ],
   "guide": {
     "parameters": {
-      "en": [],
-      "zh": []
+      "en": [
+        "Function Select Menu:",
+        "- M: Function select (default: 100 for damage calculation)",
+        "Move Accuracy / Status Roll:",
+        "- M: Accuracy percentage",
+        "Random Number Roll:",
+        "- A: Minimum value (default: 1)",
+        "- B: Maximum value (default: 3)",
+        "Damage Calculation:",
+        "- Y: Move power",
+        "- A: Attacking Pokémon's Atk or Sp.Atk stat",
+        "- B: Stat level modifier (-6 to +6, default: 0)",
+        "- D: Defending Pokémon's Def or Sp.Def stat",
+        "- C: Critical hit level (0-3, default: 0)",
+        "- X: Damage modifier (STAB, type effectiveness, etc.). Input 1 to finish",
+        "- M: Number of hits (default: 1)",
+        "HP Tracking:",
+        "- D: HP change (negative for damage, positive for healing)",
+        "- C: Current HP (default: 159)",
+        "- M: Max HP (default: 159)"
+      ],
+      "zh": [
+        "功能選單：",
+        "- M: 功能選擇（預設：100 進入傷害計算）",
+        "招式命中率／狀態異常機率：",
+        "- M: 命中率百分比",
+        "隨機數字：",
+        "- A: 最小值（預設：1）",
+        "- B: 最大值（預設：3）",
+        "傷害計算：",
+        "- Y: 招式威力",
+        "- A: 攻擊方攻擊力或特攻",
+        "- B: 能力等級修正（-6 至 +6，預設：0）",
+        "- D: 防守方防禦力或特防",
+        "- C: 會心一擊等級（0-3，預設：0）",
+        "- X: 傷害修正值（屬性一致加成、屬性相剋等），輸入 1 結束",
+        "- M: 攻擊次數（預設：1）",
+        "生命值追蹤：",
+        "- D: 生命值變化（負數為傷害，正數為回復）",
+        "- C: 當前生命值（預設：159）",
+        "- M: 最大生命值（預設：159）"
+      ]
     },
     "instructions": {
-      "en": [],
-      "zh": []
+      "en": [
+        "Roll move accuracy: input accuracy to M (e.g. 95 for 95%, or 0.7 for 70%)",
+        "Roll status condition probability: input probability to M (e.g. 30 for 30%)",
+        "Roll random number between A and B: input 13 to M",
+        "Calculate damage: input 100 to M (or press EXE to use default)",
+        "Track HP directly: input 99 to M",
+        "Re-roll K hits with previous damage values: input -K to M",
+        "Critical hit rates by level: 0 = 1/24, 1 = 1/8, 2 = 1/2, 3 = always",
+        "Damage modifiers: input each multiplier one at a time, input 1 to finish",
+        "After damage calculation, program flows to HP tracking automatically"
+      ],
+      "zh": [
+        "判定招式命中率：M 輸入命中率（例如 95 代表 95%，或 0.7 代表 70%）",
+        "判定狀態異常機率：M 輸入機率（例如 30 代表 30%）",
+        "在兩個數字之間隨機選取：M 輸入 13",
+        "計算傷害：M 輸入 100（或直接按 EXE 使用預設值）",
+        "直接追蹤生命值：M 輸入 99",
+        "以上次傷害值重新擲K次攻擊：M 輸入 -K",
+        "會心一擊等級機率：0 = 1/24、1 = 1/8、2 = 1/2、3 = 必定",
+        "傷害修正值：逐一輸入各修正倍率，輸入 1 結束",
+        "傷害計算結束後，程式會自動進入生命值追蹤"
+      ]
     },
-    "examples": []
+    "examples": [
+      {
+        "title": {
+          "en": "Move Accuracy Roll - Thunder",
+          "zh": "招式命中判定 - 打雷"
+        },
+        "steps": [
+          {
+            "en": "Input 70 to M (Thunder has 70% accuracy)",
+            "zh": "M 輸入 70（打雷命中率為70%）"
+          },
+          {
+            "en": "Program rolls random number and compares with 70%",
+            "zh": "程式擲隨機數並與70%比較"
+          },
+          {
+            "en": "Program displays: Yeαh (hit) or FuCkeD (miss)",
+            "zh": "程式顯示：Yeαh（命中）或 FuCkeD（未命中）"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Random Number Roll - Sleep Duration",
+          "zh": "隨機數字 - 睡眠回合數"
+        },
+        "steps": [
+          {
+            "en": "Input 13 to M to enter random number function",
+            "zh": "M 輸入 13 進入隨機數字功能"
+          },
+          {
+            "en": "Input 1 to A (minimum turns), or press EXE to use default",
+            "zh": "A 輸入 1（最少回合數），或按 EXE 使用預設值"
+          },
+          {
+            "en": "Input 3 to B (maximum turns), or press EXE to use default",
+            "zh": "B 輸入 3（最多回合數），或按 EXE 使用預設值"
+          },
+          {
+            "en": "Program displays: 2 (sleep lasts 2 turns)",
+            "zh": "程式顯示：2（睡眠持續2回合）"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Damage Calculation - Thunderbolt vs Gyarados",
+          "zh": "傷害計算 - 十萬伏特 對 暴鯉龍"
+        },
+        "steps": [
+          {
+            "en": "Input 100 to M (or press EXE) to enter damage calculation",
+            "zh": "M 輸入 100（或直接按 EXE）進入傷害計算"
+          },
+          {
+            "en": "Input 90 to Y (Thunderbolt has 90 base power)",
+            "zh": "Y 輸入 90（十萬伏特威力為90）"
+          },
+          {
+            "en": "Input 55 to A (Pikachu's Sp.Atk stat at Lv.50)",
+            "zh": "A 輸入 55（比卡超50級特攻值）"
+          },
+          {
+            "en": "Input 0 to B (no attack level modifier), or press EXE",
+            "zh": "B 輸入 0（無攻擊等級修正），或按 EXE"
+          },
+          {
+            "en": "Input 100 to D (Gyarados's Sp.Def stat at Lv.50)",
+            "zh": "D 輸入 100（暴鯉龍50級特防值）"
+          },
+          {
+            "en": "Input 0 to B (no defence level modifier), or press EXE",
+            "zh": "B 輸入 0（無防禦等級修正），或按 EXE"
+          },
+          {
+            "en": "Input 0 to C (no critical hit boost), or press EXE",
+            "zh": "C 輸入 0（無會心一擊加成），或按 EXE"
+          },
+          {
+            "en": "Input 1.5 to X (STAB: Pikachu is Electric-type)",
+            "zh": "X 輸入 1.5（屬性一致加成：比卡超為電屬性）"
+          },
+          {
+            "en": "Input 4 to X (super effective: Electric is 4x vs Water/Flying)",
+            "zh": "X 輸入 4（屬性相剋：電對水／飛行為4倍）"
+          },
+          {
+            "en": "Input 1 to X to finish entering modifiers",
+            "zh": "X 輸入 1 結束輸入修正值"
+          },
+          {
+            "en": "Input 1 to M (single hit), or press EXE",
+            "zh": "M 輸入 1（單次攻擊），或按 EXE"
+          },
+          {
+            "en": "Program displays Cret if critical hit occurs, then flows to HP tracking",
+            "zh": "若觸發會心一擊，程式顯示 Cret，然後進入生命值追蹤"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "HP Tracking",
+          "zh": "生命值追蹤"
+        },
+        "steps": [
+          {
+            "en": "Input 99 to M to enter HP tracking directly",
+            "zh": "M 輸入 99 直接進入生命值追蹤"
+          },
+          {
+            "en": "Input -50 to D (took 50 damage)",
+            "zh": "D 輸入 -50（受到50點傷害）"
+          },
+          {
+            "en": "Input 170 to C (current HP)",
+            "zh": "C 輸入 170（當前生命值）"
+          },
+          {
+            "en": "Input 170 to M (max HP)",
+            "zh": "M 輸入 170（最大生命值）"
+          },
+          {
+            "en": "Program displays: 120 (remaining HP)",
+            "zh": "程式顯示：120（剩餘生命值）"
+          },
+          {
+            "en": "Program displays: 70.59 (HP percentage)",
+            "zh": "程式顯示：70.59（生命值百分比）"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Multi-hit Re-roll - Bullet Seed",
+          "zh": "多段攻擊重擲 - 種子機關槍"
+        },
+        "steps": [
+          {
+            "en": "After a previous damage calculation, A and B retain the damage values",
+            "zh": "完成傷害計算後，A 和 B 保留上次嘅傷害值"
+          },
+          {
+            "en": "Input -5 to M (re-roll 5 hits with previous damage values)",
+            "zh": "M 輸入 -5（以上次傷害值重新擲5次攻擊）"
+          },
+          {
+            "en": "Program rolls each hit with random damage variation (85%-100%)",
+            "zh": "程式為每次攻擊擲隨機傷害浮動（85%-100%）"
+          },
+          {
+            "en": "Program displays Cret for any critical hits",
+            "zh": "若觸發會心一擊，程式顯示 Cret"
+          },
+          {
+            "en": "Total damage is accumulated in D, then flows to HP tracking",
+            "zh": "總傷害累積在 D，然後進入生命值追蹤"
+          }
+        ]
+      }
+    ]
   }
 }
