@@ -5,9 +5,9 @@
     "": {
       "name": "bob-calta",
       "dependencies": {
-        "react": "^19.2.5",
-        "react-dom": "^19.2.5",
-        "react-router-dom": "^7.14.2",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
+        "react-router-dom": "^7.15.0",
       },
       "devDependencies": {
         "@vitejs/plugin-react": "^4.7.0",
